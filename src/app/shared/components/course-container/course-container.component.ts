@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CourseService } from 'src/app/shared/service/course.service';
+import { Course } from 'src/app/shared/interfaces/course';
 
 @Component({
   selector: 'app-course-container',
@@ -7,10 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CourseContainerComponent implements OnInit {
   @Input() typeShow: 'all' | 'featured' = 'all';
-  courses = [];
-  constructor() { }
+  courses: Course[];
+  constructor(
+    private courseService: CourseService
+  ) { }
 
   ngOnInit(): void {
+    this.courseService.getCourses().subscribe(
+      courses => this.courses = courses
+    );
   }
 
 }
