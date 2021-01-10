@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-// import { Course } from 'src/app/shared/interfaces/course'
+import { Component, OnInit, Input } from '@angular/core';
+import { Course } from 'src/app/shared/interfaces/course';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course.component.scss']
 })
 export class CourseComponent implements OnInit {
-  // @Input() course: Course;
+  @Input() curso: Course;
   constructor() { }
 
   ngOnInit(): void {

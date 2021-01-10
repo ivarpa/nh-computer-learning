@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-course-container',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course-container.component.scss']
 })
 export class CourseContainerComponent implements OnInit {
-
+  @Input() typeShow: 'all' | 'featured' = 'all';
+  courses = [];
   constructor() { }
 
   ngOnInit(): void {
