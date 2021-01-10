@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'subscription',
+    path: 'contact',
     loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule)
   },
   {
@@ -19,7 +19,6 @@ const routes: Routes = [
     loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
   }
  ];
- 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

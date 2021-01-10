@@ -7,8 +7,7 @@ const routes: Routes = [
     path: '',
     component: ContactPageComponent
   }
- ];
- 
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

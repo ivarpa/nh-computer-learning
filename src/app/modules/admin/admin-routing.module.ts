@@ -7,8 +7,7 @@ const routes: Routes = [
     path: 'add-course',
     component: AddCoursePageComponent
   }
- ];
- 
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
